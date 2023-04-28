@@ -39,9 +39,40 @@
     - Security **Open**
 5. Click Add
 6. Copy the API Endpoint and paste locally for future use.
-Endpoint will be something like:
-    ```
-    https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-<YOUR-NAME>
-    ```
+Endpoint will look something like this:
+```
+https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-<YOUR-NAME>
+```
 
-## Step 4 - 
+## Step 4 - Create frontend webpage
+    
+1. Go to Services > S3
+2. Click *Create Bucket*
+3. Enter these details:
+    - Name `gatech-weather-<YOUR-NAME>`
+    - Uncheck Block Public Access
+    - Check *I agree* on the next prompt
+    - Click **Create Bucket**
+4. Click on Bucket Name, Go to Properties Tab, Scroll Down, Click Edit near Static Website Hosting
+5. Click Enable. In Index Document, enter `index.html`, Click Save Changes
+6. Scroll down and copy the URL for future use.
+7. Scroll up and go to Permissions > Bucket Policy > Edit
+Copy the bucket ARN from top of the section. It will look something like `arn:aws:s3:::gatech-weather-<YOUR-NAME>`
+Copy this:
+```
+{
+  "Id": "Policy1682690362649",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1682690360714",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "<ENTER BUCKET ARN HERE>/*",
+      "Principal": "*"
+    }
+  ]
+}
+```
