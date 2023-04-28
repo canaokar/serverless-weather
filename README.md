@@ -28,3 +28,20 @@
   }
 }
 ```
+
+## Step 3 - Create an API
+
+1. Click on **+Add Trigger**
+2. Select `API Gateway` from Dropdown
+3. Create **New API**
+4. Select these details:
+    - Select **HTTP**
+    - Security **Open**
+5. Click Add
+6. Copy the API Endpoint and paste locally for future use.
+Endpoint will be something like:
+    ```
+    https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-<YOUR-NAME>
+    ```
+
+## Step 4 - 
