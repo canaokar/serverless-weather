@@ -15,3 +15,14 @@
 8. Enter the API Key in the placeholder in the Lambda code.
 
 ## Step 2 - Test your Lambda Function:
+
+1. Click on **Test** button on your Lambda Screen
+2. Select Create New event
+3. Enter Event name - **Test**, or anything you like
+4. Enter this in Event JSON:
+`{
+  "queryStringParameters": {
+    "latitude": "33.7490",
+    "longitude": "-84.3880"
+  }
+}`
