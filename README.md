@@ -57,8 +57,10 @@ https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-<Y
 5. Click Enable. In Index Document, enter `index.html`, Click Save Changes
 6. Scroll down and copy the URL for future use.
 7. Scroll up and go to Permissions > Bucket Policy > Edit
-Copy the bucket ARN from top of the section. It will look something like `arn:aws:s3:::gatech-weather-<YOUR-NAME>`
-Copy this:
+8. Copy the bucket ARN from top of the section. It will look something like:
+`arn:aws:s3:::gatech-weather-<YOUR-NAME>`
+
+Copy below policy into the page:
 ```
 {
   "Id": "Policy1682690362649",
