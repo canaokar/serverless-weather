@@ -1,5 +1,9 @@
 # Serverless Web App for Leveraging Serverless workshop
 
+## Login to the console
+1. Navigate to [https://console.aws.amazon.com/console/home] in your browser
+2. Enter the Account ID, Username, Password provided to you on the screen.
+
 ## Step 1 - Create Lambda Function (Logic)
 
 1. Open AWS Console, go to Services > Lambda
