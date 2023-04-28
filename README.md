@@ -6,7 +6,7 @@
 2. Click on Create Function
 3. Enter these details:
     - Select Author from Scratch
-    - Enter Function Name as 'gatechWeather-<YOUR-NAME>'
+    - Enter Function Name as 'gatechWeather-YOUR-NAME'
     - Runtime: Python 3.10
 4. Click Create Function
 5. Open [https://github.com/canaokar/serverless-weather] and navigate to *lambda_function.py*
@@ -41,7 +41,7 @@
 6. Copy the API Endpoint and paste locally for future use.
 Endpoint will look something like this:
 ```
-https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-<YOUR-NAME>
+https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-YOUR-NAME
 ```
 
 ## Step 4 - Create frontend webpage
@@ -58,7 +58,7 @@ https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-<Y
 6. Scroll down and copy the URL for future use.
 7. Scroll up and go to Permissions > Bucket Policy > Edit
 8. Copy the bucket ARN from top of the section. It will look something like:
-`arn:aws:s3:::gatech-weather-<YOUR-NAME>`
+`arn:aws:s3:::gatech-weather-YOUR-NAME`
 
 9. Copy below policy into the page:
 ```
@@ -82,7 +82,7 @@ https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-<Y
 ## Step 5 - Put everything in place
     
 1. Go to Lambda page, click on API Gateway in the Trigger section
-2. Click on the Link for the name - `gatechWeather-<YOUR-NAME>-API`
+2. Click on the Link for the name - `gatechWeather-YOUR-NAME-API`
 3. In the Left menu select CORS, select *Configure*
 4. In the *Access-Control-Allow-Origin*, enter the S3 Website URL you copied
 5. Click *Save*
