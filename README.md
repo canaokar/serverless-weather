@@ -60,7 +60,7 @@ https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-<Y
 8. Copy the bucket ARN from top of the section. It will look something like:
 `arn:aws:s3:::gatech-weather-<YOUR-NAME>`
 
-Copy below policy into the page:
+9. Copy below policy into the page:
 ```
 {
   "Id": "Policy1682690362649",
@@ -78,3 +78,15 @@ Copy below policy into the page:
   ]
 }
 ```
+
+## Step 5 - Put everything in place
+    
+1. Go to Lambda page, click on API Gateway in the Trigger section
+2. Click on the Link for the name - `gatechWeather-<YOUR-NAME>-API`
+3. In the Left menu select CORS, select *Configure*
+4. In the *Access-Control-Allow-Origin*, enter the S3 Website URL you copied
+5. Click *Save*
+6. Return to S3 page
+7. Open the `index.html` file in your file editor on your computer and enter the API Gateway URL on `line 103`
+8. Go to Objects, upload, and upload the index.html file
+9. Voila! Open the website from the S3 website URL you copied. 
