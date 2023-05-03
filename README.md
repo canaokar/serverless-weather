@@ -14,7 +14,7 @@
     - Runtime: Python 3.10
 4. Click Create Function
 5. Open [https://github.com/canaokar/serverless-weather] and navigate to *lambda_function.py*
-6. Paste the contents of the file into the edior on Lambda page.
+6. Paste the contents of the file into the editor on Lambda page.
 7. Register to get your API Key here: [https://openweathermap.org/api]
 8. Enter the API Key in the placeholder in the Lambda code.
 
@@ -41,6 +41,7 @@
 4. Select these details:
     - Select **HTTP**
     - Security **Open**
+    - Under Additional Settings enable Cross-origin resource sharing (CORS)
 5. Click Add
 6. Copy the API Endpoint and paste locally for future use.
 Endpoint will look something like this:
@@ -82,15 +83,16 @@ https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-YO
   ]
 }
 ```
+10. Replace the "<ENTER BUCKET ARN HERE>" with the value copied above. *Do not* delete the /* in front of it. 
 
 ## Step 5 - Put everything in place
     
 1. Go to Lambda page, click on API Gateway in the Trigger section
 2. Click on the Link for the name - `gatechWeather-YOUR-NAME-API`
 3. In the Left menu select CORS, select *Configure*
-4. In the *Access-Control-Allow-Origin*, enter the S3 Website URL you copied
-5. Click *Save*
-6. Return to S3 page
-7. Open the `index.html` file in your file editor on your computer and enter the API Gateway URL on `line 103`
-8. Go to Objects, upload, and upload the index.html file
-9. Voila! Open the website from the S3 website URL you copied. 
+4. In the *Access-Control-Allow-Origin*, enter the S3 Website URL you copied. Click on *Add* button next to it. 
+6. Click *Save*
+7. Return to S3 page
+8. Open the `index.html` file in your file editor on your computer and enter the API Gateway URL on `line 103`
+9. Go to Objects, upload, and upload the index.html file
+10. Voila! Open the website from the S3 website URL you copied. 
