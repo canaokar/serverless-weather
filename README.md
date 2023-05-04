@@ -41,7 +41,7 @@
 4. Select these details:
     - Select **HTTP**
     - Security **Open**
-    - Under Additional Settings enable Cross-origin resource sharing (CORS)
+    - Under Additional Settings enable Cross-origin resource sharing (CORS) *[IMPORTANT]*
 5. Click Add
 6. Copy the API Endpoint and paste locally for future use.
 Endpoint will look something like this:
@@ -87,12 +87,7 @@ https://abcdefghi123.execute-api.<region>.amazonaws.com/default/gatechWeather-YO
 
 ## Step 5 - Put everything in place
     
-1. Go to Lambda page, click on API Gateway in the Trigger section
-2. Click on the Link for the name - `gatechWeather-YOUR-NAME-API`
-3. In the Left menu select CORS, select *Configure*
-4. In the *Access-Control-Allow-Origin*, enter the S3 Website URL you copied. Click on *Add* button next to it. 
-6. Click *Save*
-7. Return to S3 page
-8. Open the `index.html` file in your file editor on your computer and enter the API Gateway URL on `line 103`
-9. Go to Objects, upload, and upload the index.html file
-10. Voila! Open the website from the S3 website URL you copied. 
+1. Return to S3 page
+2. Open the `index.html` file in your file editor on your computer and enter the API Gateway URL on `line 103`
+3. Go to Objects, upload, and upload the index.html file
+4. Voila! Open the website from the S3 website URL you copied. 
